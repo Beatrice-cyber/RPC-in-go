@@ -25,6 +25,8 @@ func main() {
 	//TODO: connect to the RPC server and send the request(s)
 	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
+	// this is how you open a file in go
+
 	data, err := os.ReadFile("wordlist")
 	check(err)
 	str := string(data)
